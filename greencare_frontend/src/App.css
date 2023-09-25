@@ -1,0 +1,398 @@
+body {
+  background-color: #e9efc0;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  margin: 0 0 3rem 0;
+  z-index: 100;
+}
+
+.navbar-links > div:hover {
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar {
+  padding: 1.5rem;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  background-color: #4e944f;
+}
+
+.navbar-logo {
+  font-size: 1.7rem;
+  color: white;
+  text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000,
+    -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000,
+    -2px 0px 0 #000000, 0px -2px 0 #000000, 2px 2px 2px rgba(206, 160, 137, 0);
+}
+
+.navbar-links > div {
+  margin: 0 1rem;
+}
+
+.login-register-logo {
+  font-size: 2rem;
+  color: white;
+}
+
+.login-register-header {
+  font-size: 1.6rem;
+  margin: 0.5rem 0;
+  color: white;
+}
+
+.login-register,
+.login-register-form,
+.login-register-input {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  flex-direction: column;
+}
+
+.input {
+  width: 13rem;
+  font-size: 1.2rem;
+  border: solid #4e944f 0.3rem;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  background-color: #e7eeb8;
+}
+
+.input::placeholder {
+  color: #464646;
+}
+
+.input:focus,
+textarea:focus {
+  border: solid #f8fcde 0.3rem;
+  outline: none;
+}
+
+.login-register {
+  flex-direction: column;
+  margin: auto;
+  margin-top: 8rem;
+  border: solid #4e944f 0.3rem;
+  border-radius: 2rem;
+  width: 17rem;
+  padding: 2rem;
+  background-color: #83bd75;
+}
+
+.login-register-form {
+  flex-direction: column;
+}
+
+.login-register-form > div {
+  margin: 1rem 0;
+}
+
+.login-register-button {
+  border: solid #4e944f 0.2rem;
+  width: 10rem;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  background-color: #e9efc0;
+  font-size: 1.05rem;
+}
+
+.login-register-button:hover {
+  cursor: pointer;
+  background-color: #f0f3dc;
+}
+.login-register-button:active {
+  background-color: rgb(156, 237, 194);
+}
+
+.error {
+  color: rgb(148, 0, 0);
+  margin-top: 0.3rem;
+  width: 13rem;
+  align-self: center;
+}
+
+.pw-visibillity-button {
+  margin-top: 0.3rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.forgot-password-button {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.forgot-password-button:hover {
+  cursor: pointer;
+}
+
+.home-unlogged-page1,
+.home-unlogged-page2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.home-unlogged-page2 {
+  margin: 12rem 0;
+}
+
+.home-unlogged-page1-header,
+.home-unlogged-page2 {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 2rem;
+  margin-top: 7rem;
+}
+
+.carousel-slider {
+  margin: 0 auto !important;
+}
+
+.bm-burger-button {
+  position: fixed;
+  margin: 0 0 3rem 0;
+  z-index: 100;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 25px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #b4e197;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #c2e2ac;
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top: 0;
+}
+
+.bm-overlay {
+  top: 0;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #4e944f;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  text-align: center;
+}
+
+.menu-item {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(255, 241, 216);
+  margin: 1.8rem 0;
+}
+
+.menu-item-container {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+i {
+  margin: 0 0.5rem;
+  font-size: 2rem !important;
+}
+
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding: 3rem 3rem 3rem 0;
+  text-align: center;
+  background-color: #4e944f;
+  color: white;
+}
+
+.footer-container > div {
+  font-size: 1.15rem;
+  margin: 1rem;
+}
+
+.home-unlogged-page2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prlx-img1 {
+  padding-top: 5rem;
+  width: 25rem;
+  height: auto;
+}
+
+.prlx-img2 {
+  width: 65rem;
+  height: auto;
+}
+
+.prlx-img3 {
+  padding-top: 1rem;
+  width: 40rem;
+  height: auto;
+}
+
+.prlx-img4 {
+  padding-top: 5rem;
+  width: 34rem;
+  height: auto;
+}
+
+.prlx-img5 {
+  padding-top: 2rem;
+  width: 40rem;
+  height: auto;
+}
+
+@media only screen and (max-width: 1120px) {
+  .prlx-notif1 {
+    opacity: 0;
+  }
+}
+.prlx-notif1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.prlx-img6,
+.prlx-img7 {
+  width: 30rem;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+
+.prlx-img8,
+.prlx-img9 {
+  width: 30rem;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 24rem;
+}
+
+.prlx-img7 {
+  padding-top: 9rem;
+}
+
+.prlx-img9 {
+  padding-top: 27rem;
+}
+
+.prlx-img10 {
+  width: 20rem;
+  height: auto;
+  padding-top: 17rem;
+}
+
+.prlx-img11 {
+  width: 20rem;
+  height: auto;
+  padding-right: 45rem;
+  padding-top: 13rem;
+}
+
+.prlx-img12 {
+  width: 30rem;
+  height: auto;
+  padding-left: 50rem;
+  padding-top: 16rem;
+}
+
+.create-account-button {
+  min-width: 130px;
+  height: 40px;
+  color: #ffffff;
+  padding: 10px 10px 18px 10px;
+  font-weight: bold;
+  font-size: 2.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 2rem;
+  border: none;
+  background-size: 120% auto;
+  background-image: linear-gradient(315deg, #59ff4a 10%, #c7ad56 80%);
+  margin-top: 5rem;
+}
+.create-account-button:hover {
+  background-position: right center;
+  border-radius: 5px;
+  padding-right: 34px;
+  padding-left: 16px;
+}
+.create-account-button:active {
+  top: 2px;
+}
+
+.create-account-button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.create-account-button:after {
+  content: "\00BB";
+  position: absolute;
+  opacity: 0;
+  font-size: 2.3rem;
+  line-height: 40px;
+  bottom: 18px;
+  right: -35px;
+  transition: 0.4s;
+}
+
+.modal {
+  width: 30rem;
+  height: 12rem;
+  background-color: #e9efc0;
+  text-align: center;
+  margin: 8rem auto;
+  padding: 5rem 3rem;
+  border: solid #4e944f 0.5rem;
+}
+
+.modal > div {
+  font-size: 1.2rem;
+}
