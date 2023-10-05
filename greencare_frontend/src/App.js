@@ -12,36 +12,36 @@ import Navbar from "./components/navbar";
 import Login from "./components/login";
 import Register from "./components/register";
 import Home from "./components/home";
-import HomeUnlogged from "./components/homeUnlogged";
-import { pushRotate as Menu } from "react-burger-menu";
-import Footer from "./components/footer";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import PrlxWebExplain from "./components/prlxWebExplain";
 import ForgotPassword from "./components/forgotPassword";
+import Error from "./components/error";
+import { useSelector } from "react-redux";
+import ChangePassword from "./components/changePassword";
 
-export const GreencareData = createContext();
 function App() {
-  const [data, setData] = useState({
-    isLogged: false,
-  });
+  const navigate = useNavigate();
+  const auth = useSelector((state) => state.auth);
   return (
     <div id="outer-container" className="App">
-      <GreencareData.Provider value={data}>
-        <Navbar></Navbar>
+      <Navbar></Navbar>
 
-        {data.isLogged ? (
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-          </Routes>
-        ) : (
-          <Routes>
-            <Route path="/" element={<PrlxWebExplain />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/register" element={<Register />}></Route>
-            <Route path="/forgotPassword" element={<ForgotPassword />}></Route>
-          </Routes>
-        )}
-      </GreencareData.Provider>
+      {auth.isLoggedIn ? (
+        <Routes>
+          {auth.isLoggedIn &&
+            window.location.href.includes("/login") &&
+            navigate("/")}
+          <Route path="/" element={<Home />}></Route>
+        </Routes>
+      ) : (
+        <Routes>
+          <Route path="/" element={<PrlxWebExplain />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/forgotPassword" element={<ForgotPassword />}></Route>
+          <Route path="/changePassword" element={<ChangePassword />}></Route>
+          <Route path="/error" element={<Error />}></Route>
+        </Routes>
+      )}
     </div>
   );
 }
