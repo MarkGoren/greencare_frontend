@@ -55,14 +55,14 @@ body {
 .login-register-form,
 .login-register-input {
   display: flex;
-  justify-content: center;
-  text-align: center;
   margin: auto;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .input {
-  width: 13rem;
+  width: 16rem;
   font-size: 1.2rem;
   border: solid #4e944f 0.3rem;
   border-radius: 0.5rem;
@@ -228,6 +228,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .menu-item-container {
   display: flex !important;
   flex-direction: column !important;
+  align-items: center;
 }
 
 i {
@@ -395,4 +396,53 @@ i {
 
 .modal > div {
   font-size: 1.2rem;
+}
+
+.error-page {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 15rem;
+}
+
+.error-page > h2 {
+  font-size: 3rem;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  border: solid #000000 0.4rem;
+  padding: 0.7rem;
+  margin: auto;
+  margin-top: 3rem;
+  width: 9rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: black;
+  color: white;
+}
+
+.navbar-profile-image {
+  width: 2.2rem;
+  margin: 0 0.5rem;
+  border-radius: 100%;
+}
+
+.profile-image-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
 }

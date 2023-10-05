@@ -1,19 +1,13 @@
-import { useContext } from "react";
-import { GreencareData } from "../App";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Home() {
-  const data = useContext(GreencareData);
+  const auth = useSelector((state) => state.auth);
   const navigate = useNavigate();
-  if (!data.isLogged) navigate("/login");
   return (
-    <div
-      className="home"
-      style={{
-        height: "100vh",
-      }}
-    >
-      home
+    <div className="home">
+      <h1>home</h1>
     </div>
   );
 }
